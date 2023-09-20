@@ -1,27 +1,32 @@
-# React + TypeScript + Vite
+# Form exercise
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Form created by a given objects array, wich have the type, and name, in case to be a select, render the propper options to show the info correctly, using mui to the ux/ui components and react hook form to handle the inputs
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
+- array used for this example:
 
 ```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+   [
+     {
+       id: 1,
+       name: 'name',
+       type: 'text',
+     },
+     {
+       id: 2,
+       name: 'email',
+       type: 'email',
+     },
+     {
+       id: 3,
+       name: 'password',
+       type: 'password',
+     },
+     {
+       id: 4,
+       name: 'age',
+       type: 'select',
+       options: [10, 20, 30]
+     }
+   ]
 ```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+![Screenshot 2023-09-19 at 19 37 28](https://github.com/EstebGtzMtz/form-exercise/assets/43084165/25acd63e-6f91-411d-a567-c72b610cb218)
