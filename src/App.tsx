@@ -9,6 +9,10 @@ interface formObjectInterface {
   type: string
   options?: number[]
   defaultSelectOption?: number
+  validations?: {
+    required?: boolean
+    maxLength?: number
+  }
 }
 
 type Inputs = {
@@ -79,23 +83,23 @@ function App() {
                       }
                     </TextField>
                   </Grid> :
-                  <TextField
-                    label={el.name}
-                    type={el.type}
-                    name={el.name}
-                    {...register(el.name)}
-                  />
+                    <TextField
+                      label={el.name}
+                      type={el.type}
+                      name={el.name}
+                      {...register(el.name)}
+                    />
                 }
               </Grid>
             ))
         }
         <Grid container spacing={2} sx={{mb: 2, mt: 1}}>
-            <Grid item xs={12}>
-              <Button variant='contained' fullWidth type='submit'>
-                Submit
-              </Button>
-            </Grid>
+          <Grid item xs={12}>
+            <Button variant='contained' fullWidth type='submit'>
+              Submit
+            </Button>
           </Grid>
+        </Grid>
       </form>
     </Grid>
       <pre>
